@@ -1,5 +1,7 @@
 sudo: required
 dist: trusty
+script:
+- echo "foo"
 deploy:
   provider: releases
   api_key:
