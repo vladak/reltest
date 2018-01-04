@@ -3,6 +3,7 @@ dist: trusty
 script:
 - echo "foo"
 deploy:
+  # Pre-release
   - provider: releases
     script:
     - echo "$TRAVIS_TAG"
@@ -16,6 +17,7 @@ deploy:
       repo: vladak/reltest
       tags: true
       condition: "$TRAVIS_TAG =~ rc[0-9]+$"
+  # Full release
   - provider: releases
     script:
     - echo "$TRAVIS_TAG"
