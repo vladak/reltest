@@ -6,7 +6,7 @@ script:
 - export DO_PRERELEASE=true
 deploy:
   provider: releases
-  prerelease: $DO_PRERELEASE
+  prerelease: "$TRAVIS_TAG =~ rc[0-9]*$"
   api_key:
     secure: lt/THeAX7lUPoBIk/oSkI9UVOvGc2zLdKjpjQRGAefs4sMevq8OOqvMjKRUuPEDCdsQp6NKK+/RO94jZ/rFZXW1KZqNqmmAHkOkaPK3z6L27JxwAqA2FMTeZCkvD6/HJbxoYpBm/MMWhbSZprOxv6xnFRULI0wwSc2LKiVBgABU9FmkQgcg0pFq5am7QtrUV33oFZN0GUHwJr7rs3Uw81Pt4fuYqruXFv3c3FSfTU0U+tfkwm2cDUP7pY05KOMfViJ0R+2ZWNl5+cdx78Sg9hDS9+gv30ZtsO31kGZ7p1lVilYAXnjhDjq0K74DoVZ2SPpLMQ5gT4se2tGfEO+hc5AseQUorMtBhhUmN/WjsLRXnBKrIlkknnLxYPc8MNCKrKt6CLj9+IIuNbOwz/xZwVq8mWPVKqV7AG3tudEvVTaVcoays61L6eLeqv4nqJGhcKfQsiRmS8DjCkkGlFvH+D8pPher9YRiNx/CTjXrIkF57rRXLqyEA85qUh6GQR6PiXEYwDIGb55X+tEhHQhmXPQ6uDUWraG78cQR3C/BJXRhckuXUquS/uxx2R7ZVUtBu8r8Ubs+sJoZya4f9vG8h1ZN3ToLED6sM4yWvxIF/7Hrsj4E7GQqAEwqcxUm7JHOtlUHxafv6MWmk+8A2Ccp2pu5xQ4O3h+IY/O5f5AuxaT0=
   file: README.md
